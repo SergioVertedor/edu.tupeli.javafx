@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1280.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PantallaRegistroController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="500.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" prefHeight="220.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" prefHeight="300.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fx:id="imgLogo" fitHeight="220.0" fitWidth="220.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo/logo.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="15.0" top="15.0" />
+         </GridPane.margin>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefWidth="600.0" text="¿Eres nuevo por aquí?" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <font>
+            <Font size="34.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <VBox alignment="CENTER_RIGHT" prefWidth="795.0" spacing="60.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="TOP_RIGHT" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                     <children>
+                        <Label fx:id="lblUsuario" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="220.0" text="Usuario:" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtUserName" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="520.0" style="-fx-background-radius: 12;">
+                           <font>
+                              <Font name="Corbel Light" size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                     <children>
+                        <Label fx:id="lblEmail" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="220.0" text="Correo electrónico:" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmail" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="520.0" style="-fx-background-radius: 12;">
+                           <font>
+                              <Font name="Corbel Light" size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                     <children>
+                        <Label fx:id="lblPassword" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="220.0" text="Contraseña:" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="txtPassword" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="520.0" style="-fx-background-radius: 12;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                     <children>
+                        <Label fx:id="lblPasswordRepeat" alignment="CENTER_RIGHT" contentDisplay="CENTER" minWidth="-Infinity" prefWidth="220.0" text="Repita contraseña:" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="txtPasswordRepeat" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="520.0" style="-fx-background-radius: 12;" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="40.0" right="220.0" top="40.0" />
+         </GridPane.margin>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="299.0" prefWidth="1920.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <VBox prefWidth="240.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnLoginRegister" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnRegisterNewUserPressed" prefHeight="40.0" prefWidth="240.0" style="-fx-border-radius: 12;" text="Crear nuevo usuario" textAlignment="CENTER" />
+                  <Button fx:id="btnVolver" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnVolver" prefHeight="40.0" prefWidth="240.0" style="-fx-border-radius: 12;" text="¿Ya tienes cuenta?" textAlignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" top="10.0" />
+   </padding>
+</GridPane>
