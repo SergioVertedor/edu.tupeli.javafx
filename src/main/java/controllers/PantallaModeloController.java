@@ -20,40 +20,64 @@ import utils.*;
 
 /**
  * Controlador de la pantalla de inicio
-
+ * 
  */
 public class PantallaModeloController {
-  @FXML private BorderPane borderPane;
+  @FXML
+  private BorderPane borderPane;
   // Panel central de carga
-  @FXML @Getter private Pane centralPane;
+  @FXML
+  @Getter
+  private Pane centralPane;
   // Otros paneles
-  @FXML private Pane paneContent;
-  @FXML private GridPane paneHeader;
+  @FXML
+  private Pane paneContent;
+  @FXML
+  private GridPane paneHeader;
   // Logo TU.PELI
-  @FXML private ImageView imgLogo;
+  @FXML
+  private ImageView imgLogo;
   // ImageView para la sección seleccionada
-  @FXML private ImageView imgSection;
+  @FXML
+  private ImageView imgSection;
   // Nombre e imagen de perfil del usuario
-  @FXML private ImageView imgUser;
-  @FXML private Label lblUserName;
+  @FXML
+  private ImageView imgUser;
+  @FXML
+  private Label lblUserName;
   // Elementos de búsqueda
-  @FXML private TextField txtBusqueda;
-  @FXML private ImageView btnBuscar;
-  @FXML private ToggleGroup toggle;
-  @FXML private RadioButton rbPeliculas;
-  @FXML private RadioButton rbSeries;
+  @FXML
+  private TextField txtBusqueda;
+  @FXML
+  private ImageView btnBuscar;
+  @FXML
+  private ToggleGroup toggle;
+  @FXML
+  private RadioButton rbPeliculas;
+  @FXML
+  private RadioButton rbSeries;
   // Cerrar sesión
-  @FXML private ImageView imgClose;
-  @FXML private Label lblCerrarSesion;
+  @FXML
+  private ImageView imgClose;
+  @FXML
+  private Label lblCerrarSesion;
   // Secciones barra menú
-  @FXML private Label lblInicio;
-  @FXML private Label lblPeliculas;
-  @FXML private Label lblSeries;
-  @FXML private Label lblTopPeliculas;
-  @FXML private Label lblTopSeries;
-  @FXML private Label lblCartelera;
-  @FXML private Label lblProximamente;
-  @FXML private Label lblMisListas;
+  @FXML
+  private Label lblInicio;
+  @FXML
+  private Label lblPeliculas;
+  @FXML
+  private Label lblSeries;
+  @FXML
+  private Label lblTopPeliculas;
+  @FXML
+  private Label lblTopSeries;
+  @FXML
+  private Label lblCartelera;
+  @FXML
+  private Label lblProximamente;
+  @FXML
+  private Label lblMisListas;
 
   /**
    * Cambia el panel central de la aplicación por el panel de inicio
@@ -62,8 +86,7 @@ public class PantallaModeloController {
    */
   @FXML
   void buscadorOnKeyPressed(KeyEvent event) {
-    if (event.getCode().equals(KeyCode.ENTER)
-        || event.getCharacter().getBytes()[0] == '\n'
+    if (event.getCode().equals(KeyCode.ENTER) || event.getCharacter().getBytes()[0] == '\n'
         || event.getCharacter().getBytes()[0] == '\r') {
       String type;
       if (rbPeliculas.isSelected()) {
@@ -110,16 +133,12 @@ public class PantallaModeloController {
    */
   @FXML
   void cerrarSesionPressed(MouseEvent event) {
-    var sw = new SceneSwitcher();
-    try {
-      PropertiesManager.setRememberLogin("0");
-      SessionHandler.setAppUser(null);
-      var dn = new DialogNotificator();
-      dn.logoutNotification();
-      sw.switchScene("PantallaLogin");
-    } catch (IOException e) {
-      System.out.println("Error al cargar la ventana de inicio de sesión");
-    }
+    /**
+     * var sw = new SceneSwitcher(); try { PropertiesManager.setRememberLogin("0");
+     * SessionHandler.setAppUser(null); var dn = new DialogNotificator(); dn.logoutNotification();
+     * sw.switchScene("PantallaLogin"); } catch (IOException e) { System.out.println("Error al
+     * cargar la ventana de inicio de sesión"); }
+     **/
   }
 
   /**

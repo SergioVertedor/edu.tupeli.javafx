@@ -16,24 +16,22 @@ public class App extends Application {
   @Override
   public void start(Stage primaryStage) {
     try {
-      try {
-        //HibernateUtils.openSession();
-      } catch (Exception e) {
-        System.err.println("Error al conectar con la base de datos");
-        var dialogNotificator = new DialogNotificator();
-        dialogNotificator.databaseConnectionError();
-        System.exit(1);
-      }
-      if (PropertiesManager.getRememberLogin() == 1) {
-        // Gestiona el cambio de escena a "Pantalla Modelo"
-        SceneSwitcher sceneSwitch = new SceneSwitcher();
-        sceneSwitch.switchScene("PantallaModelo");
-        SessionHandler.setAppUser(PropertiesManager.getUser());
-      } else {
-        // Gestiona el cambio de escena a "Pantalla Login"
-        SceneSwitcher sceneSwitch = new SceneSwitcher();
-        sceneSwitch.switchScene("PantallaLogin");
-      }
+      /**
+       * try { HibernateUtils.openSession(); } catch (Exception e) { System.err.println("Error al
+       * conectar con la base de datos"); var dialogNotificator = new DialogNotificator();
+       * dialogNotificator.databaseConnectionError(); System.exit(1); }
+       **/
+      /**
+       * if (PropertiesManager.getRememberLogin() == 1) { Gestiona el cambio de escena a "Pantalla
+       * Modelo" SceneSwitcher sceneSwitch = new SceneSwitcher();
+       * sceneSwitch.switchScene("PantallaModelo");
+       * SessionHandler.setAppUser(PropertiesManager.getUser()); } else {
+       * 
+       * }
+       **/
+      // Gestiona el cambio de escena a "Pantalla Login"
+      SceneSwitcher sceneSwitch = new SceneSwitcher();
+      sceneSwitch.switchScene("PantallaModelo");
 
     } catch (Exception e) {
       // Imprime un mensaje en caso de error
